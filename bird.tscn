@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://c4j7wvdgyr5xv"]
+
+[ext_resource type="Texture2D" uid="uid://b7ekcwvtp2qr" path="res://BirdSprite.png" id="1_oxq0p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8lrf"]
+atlas = ExtResource("1_oxq0p")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ipfc"]
+atlas = ExtResource("1_oxq0p")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mkbf"]
+atlas = ExtResource("1_oxq0p")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8ntb"]
+atlas = ExtResource("1_oxq0p")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rddul"]
+atlas = ExtResource("1_oxq0p")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee278"]
+atlas = ExtResource("1_oxq0p")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1h24n"]
+atlas = ExtResource("1_oxq0p")
+region = Rect2(96, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2oxw"]
+atlas = ExtResource("1_oxq0p")
+region = Rect2(112, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kcw4d"]
+animations = [{
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_e8lrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ipfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mkbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8ntb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rddul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee278")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1h24n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2oxw")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 8.0
+}]
+
+[node name="bird" type="Sprite2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kcw4d")
+animation = &"flying"
+frame = 7
+frame_progress = 0.230473
