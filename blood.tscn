@@ -1,0 +1,145 @@
+[gd_scene load_steps=21 format=3 uid="uid://hlis2d15773o"]
+
+[ext_resource type="Texture2D" uid="uid://dnhcrnqvm7x8s" path="res://1_100x100px.png" id="1_6ewnk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n844"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v53o"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tojrl"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvhr3"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43rbf"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf3t4"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icnno"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vry75"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjrlg"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(300, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqgdg"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(400, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dhpg"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(500, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0t4re"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(0, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0ejf"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(100, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfwft"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(200, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oe5fs"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(300, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur8h6"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(400, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq1xd"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(500, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i4fk"]
+atlas = ExtResource("1_6ewnk")
+region = Rect2(0, 300, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bfjjw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5n844")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5v53o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tojrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvhr3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43rbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf3t4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icnno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vry75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjrlg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqgdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dhpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0t4re")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0ejf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfwft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oe5fs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur8h6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq1xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i4fk")
+}],
+"loop": true,
+"name": &"death",
+"speed": 18.0
+}]
+
+[node name="blood" type="Sprite2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bfjjw")
+animation = &"death"
+frame = 8
+frame_progress = 0.0420014

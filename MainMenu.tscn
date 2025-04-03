@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://cywyandhtflme"]
+
+[ext_resource type="Texture2D" uid="uid://b4jinik4igdgi" path="res://GameOfLife.png" id="1_eiy7p"]
+[ext_resource type="Script" uid="uid://bbd5ejh824u31" path="res://main_menu.gd" id="1_h7a2f"]
+[ext_resource type="FontFile" uid="uid://unp0nmrxrjwk" path="res://poco/Poco.ttf" id="1_i26rj"]
+[ext_resource type="PackedScene" uid="uid://dxq3t11di54h2" path="res://cat.tscn" id="3_iwfq2"]
+[ext_resource type="PackedScene" uid="uid://c4j7wvdgyr5xv" path="res://bird.tscn" id="4_7r1g0"]
+
+[node name="MainMenu" type="Node3D"]
+script = ExtResource("1_h7a2f")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+show_behind_parent = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_eiy7p")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.188235, 0.188235, 0.188235, 0.301961)
+
+[node name="cat" parent="CanvasLayer/Control/TextureRect" instance=ExtResource("3_iwfq2")]
+position = Vector2(870, 546)
+rotation = 0.0174533
+scale = Vector2(-4.87587, 5.35)
+offset = Vector2(-2.025, 0)
+
+[node name="bird" parent="CanvasLayer/Control/TextureRect" instance=ExtResource("4_7r1g0")]
+position = Vector2(411, 72)
+scale = Vector2(5, 5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 150
+text = "Game Of Life"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/VBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="NEWGAME" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 65
+text = "START SIMULATION"
+icon_alignment = 1
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/Control/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 65
+text = "QUIT GAME"

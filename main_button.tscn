@@ -1,0 +1,160 @@
+[gd_scene load_steps=4 format=3 uid="uid://yesa2p3yknxj"]
+
+[ext_resource type="Script" uid="uid://pfdir5ofrej6" path="res://main_button.gd" id="1_iu833"]
+[ext_resource type="FontFile" uid="uid://unp0nmrxrjwk" path="res://poco/Poco.ttf" id="2_innnq"]
+[ext_resource type="AudioStream" uid="uid://dxn525bi00vpn" path="res://Kevin MacLeod - Lord of the Land.mp3" id="3_iplhl"]
+
+[node name="MainButton" type="Node2D"]
+script = ExtResource("1_iu833")
+
+[node name="choice" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="choice"]
+show_behind_parent = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="choice/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -56.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Confirm" type="Button" parent="choice/Control/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("2_innnq")
+theme_override_font_sizes/font_size = 30
+text = " CONFIRM "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="choice/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -372.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="MainButton" type="Button" parent="choice/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("2_innnq")
+theme_override_font_sizes/font_size = 40
+text = "  MAIN  "
+
+[node name="Music_Button" type="Button" parent="choice/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("2_innnq")
+theme_override_font_sizes/font_size = 40
+text = "MUSIC: ON"
+
+[node name="Music_Button2" type="Button" parent="choice/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("2_innnq")
+theme_override_font_sizes/font_size = 40
+text = "SOUND: ON "
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="choice/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -266.0
+offset_top = -56.0
+offset_right = 266.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ArrowLeft" type="Button" parent="choice/Control/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("2_innnq")
+theme_override_font_sizes/font_size = 40
+text = " < "
+
+[node name="TextEdit" type="TextEdit" parent="choice/Control/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_innnq")
+theme_override_font_sizes/font_size = 30
+text = "       GENERATION:"
+editable = false
+scroll_fit_content_height = true
+
+[node name="ArrowRight" type="Button" parent="choice/Control/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("2_innnq")
+theme_override_font_sizes/font_size = 40
+text = " > "
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="choice/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -56.0
+offset_right = 180.0
+grow_vertical = 0
+
+[node name="TextEdit" type="TextEdit" parent="choice/Control/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_innnq")
+theme_override_font_sizes/font_size = 35
+text = " GRID SETTINGS:"
+editable = false
+scroll_fit_content_width = true
+
+[node name="TextEdit2" type="TextEdit" parent="choice/Control/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_innnq")
+theme_override_font_sizes/font_size = 35
+placeholder_text = "   "
+scroll_fit_content_width = true
+
+[node name="PanelContainer" type="PanelContainer" parent="choice/Control"]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 320.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="choice/Control/PanelContainer"]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="choice/Control/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_innnq")
+theme_override_font_sizes/font_size = 35
+text = "   OUTPUT DATA "
+editable = false
+scroll_fit_content_height = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="choice/Control/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+scroll_following = true
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_iplhl")
