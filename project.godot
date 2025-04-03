@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="lab2"
+<<<<<<< HEAD
 run/main_scene="uid://cywyandhtflme"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
@@ -24,6 +25,11 @@ Global="*res://Global.gd"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+=======
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+>>>>>>> f8c9b3229bbe13fa4cc8a91dad77a2c49eb7d144
 [input]
 
 BUTTON_LEFT={

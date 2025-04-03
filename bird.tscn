@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 [gd_scene load_steps=12 format=3 uid="uid://c4j7wvdgyr5xv"]
 
 [ext_resource type="Script" uid="uid://d3ne5xobtjlpw" path="res://bird.gd" id="1_crnqq"]
+=======
+[gd_scene load_steps=11 format=3 uid="uid://c4j7wvdgyr5xv"]
+
+>>>>>>> f8c9b3229bbe13fa4cc8a91dad77a2c49eb7d144
 [ext_resource type="Texture2D" uid="uid://b7ekcwvtp2qr" path="res://BirdSprite.png" id="1_oxq0p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e8lrf"]
@@ -68,7 +73,10 @@ animations = [{
 }]
 
 [node name="bird" type="Sprite2D"]
+<<<<<<< HEAD
 script = ExtResource("1_crnqq")
+=======
+>>>>>>> f8c9b3229bbe13fa4cc8a91dad77a2c49eb7d144
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kcw4d")

@@ -141,5 +141,10 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bfjjw")
 animation = &"death"
+<<<<<<< HEAD
 frame = 8
 frame_progress = 0.0420014
+=======
+frame = 17
+frame_progress = 0.0186374
+>>>>>>> f8c9b3229bbe13fa4cc8a91dad77a2c49eb7d144

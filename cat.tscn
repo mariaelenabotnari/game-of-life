@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=18 format=3 uid="uid://dxq3t11di54h2"]
 
 [ext_resource type="Script" uid="uid://w3ikob4ds76h" path="res://cat.gd" id="1_52fj1"]
@@ -7,6 +8,12 @@
 atlas = ExtResource("1_nywtt")
 region = Rect2(0, 0, 32, 32)
 
+=======
+[gd_scene load_steps=16 format=3 uid="uid://dxq3t11di54h2"]
+
+[ext_resource type="Texture2D" uid="uid://coc4oi7d53waq" path="res://JumpCatttt.png" id="1_nywtt"]
+
+>>>>>>> f8c9b3229bbe13fa4cc8a91dad77a2c49eb7d144
 [sub_resource type="AtlasTexture" id="AtlasTexture_re1ye"]
 atlas = ExtResource("1_nywtt")
 region = Rect2(0, 0, 32, 32)
@@ -62,6 +69,7 @@ region = Rect2(384, 0, 32, 32)
 [sub_resource type="SpriteFrames" id="SpriteFrames_xdad0"]
 animations = [{
 "frames": [{
+<<<<<<< HEAD
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_52fj1")
 }],
@@ -70,6 +78,8 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+=======
+>>>>>>> f8c9b3229bbe13fa4cc8a91dad77a2c49eb7d144
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_re1ye")
 }, {
@@ -115,8 +125,16 @@ animations = [{
 }]
 
 [node name="cat" type="Sprite2D"]
+<<<<<<< HEAD
 script = ExtResource("1_52fj1")
+=======
+>>>>>>> f8c9b3229bbe13fa4cc8a91dad77a2c49eb7d144
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xdad0")
 animation = &"running"
+<<<<<<< HEAD
+=======
+frame = 9
+frame_progress = 0.100183
+>>>>>>> f8c9b3229bbe13fa4cc8a91dad77a2c49eb7d144
